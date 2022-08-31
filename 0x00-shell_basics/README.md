@@ -1,2 +1,2 @@
-pwd -print the working directory
-ls- list contents of the directory 
+0-current_working_directory - pwd
+1-listit 
