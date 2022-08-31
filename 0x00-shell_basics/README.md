@@ -1,2 +1,2 @@
-pw - 0-current_working_directory
-ls - 1-listit 
+pwd -prints the absolute path name of the current working directory 
+ls - Display the contents list of your current directory
