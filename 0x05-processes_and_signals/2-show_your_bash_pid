@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+#This script display with le line bash
+#not allowed to use pgrep
+
 var="./1-list_your_processes"
 var2="bash"
 if [ $var ]
