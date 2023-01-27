@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+var="./1-list_your_processes"
+var2="bash"
+if [ $var ]
+then
+	$var | grep $var2
+fi
