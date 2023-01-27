@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#The sript print infinte by waiting sleep(2) sec
+
+var=100
+while [ $var -eq 100 ];
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
