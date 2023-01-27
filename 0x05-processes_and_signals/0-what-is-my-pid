@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-echo $$
+#This script print the pid of it self
+echo $BASHPID
