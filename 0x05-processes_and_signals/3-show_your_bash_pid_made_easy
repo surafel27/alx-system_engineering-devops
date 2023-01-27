@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
+#This scrip a bash id and its name
 var2="bash"
 pgrep -l $var2
