@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#The sript print infinte by waiting sleep(2) sec
+
+while true;
+do
+	echo "To infinity and beyond"
+	trap 'echo I am invincible!!!' 15
+	sleep 2
+done
