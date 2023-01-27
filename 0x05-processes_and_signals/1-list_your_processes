@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
+#This Script print all process wit more info
+#print TTY too
 ps -u
