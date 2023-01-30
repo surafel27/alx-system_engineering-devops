@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#this script will print time from 0 -12 and min t0 59
+
+hour=0
+while [ $hour -le 12 ];
+do
+	echo "Hour: $hour"
+	mint=1
+	while [ $mint -le 59 ];
+	do
+		echo "$mint"
+		((mint++))
+	done
+	((hour++))
+done
