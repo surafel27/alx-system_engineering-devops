@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#this will list the file inside the folder
+
+cmd=$(ls)
+for i in $cmd;
+do
+	echo "$i" | cut -d "-" -f2
+done
