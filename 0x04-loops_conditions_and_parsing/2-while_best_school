@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#This script print "Best School" 10x using while loop
+
+var=1
+while [ $var -le 10 ];
+do
+	echo "Best School"
+	((var++))
+done
