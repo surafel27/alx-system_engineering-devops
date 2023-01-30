@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#This script print "Best school" 10x using until loop
+
+var=1
+until [ $var -gt 10 ];
+do
+	echo "Best School"
+	((var++))
+done
