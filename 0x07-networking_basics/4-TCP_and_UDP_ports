@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#Display all listining ports
+
+var=$(netstat -pl)
+echo "$var"
