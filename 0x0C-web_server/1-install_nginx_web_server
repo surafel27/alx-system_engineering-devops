@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # installing nginx  web server and adding Hell world ti indxe
 
-sudo apt-get update -y
-sudo apt-get full-upgrade -y
-sudo apt-get install nginx -y
+sudo apt update -y
+sudo apt upgrade -y
+sudo apt install nginx -y
 sudo service nginx start
 echo "Hello World!" | tee /var/www/html/index.nginx-debian.html
