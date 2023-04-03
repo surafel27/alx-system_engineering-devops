@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Custom http response header
+host = $(hostname)
+sudo service nginx start
+new_string='server_name _;\n\n\trewrite \^\/redirect_me add_header X-Served-By ${host};/'
+sudo sed -i "s/server_name _;\$/${new_string}" /etc/nginx/sites-available/default
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo service nginx restart
