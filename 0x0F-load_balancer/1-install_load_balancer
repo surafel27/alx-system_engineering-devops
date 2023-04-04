@@ -47,7 +47,7 @@ else
 fi
 
 if [ "$(pgrep -c haproxy)" -le 0 ]; then
-i	sudo ervice haproxy start
+i	service haproxy start
 else
-	sudo service haproxy restart
+	service haproxy restart
 fi
