@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
 # install load balancer(HAProxy) on the lb-server and configure HAProxy
-sudo apt-get update -y
-sudo apt-get install haproxy -y
+sudo apt-get -y update
+sudo apt-get -y install haproxy
 sudo echo -e "\nfrontend not-yet.tech-frontend" >> /etc/haproxy/haproxy.cfg
 sudo echo -e "\tbind *:80" >> /etc/haproxy/haproxy.cfg
-sudo echo -e "\tdefault_backend servers" >> /etc/haproxy/haproxy.cfg
+sudo echo -e "\tstats enable" >> /etc/haproxy/haproxy.cfg
+sudo echo -e "\tstats uri /haproxy?stats" >> /etc/haproxy/haproxy.cfg
+sudo echo -e "\tdefault_backend not-yet.tech-backend" >> /etc/haproxy/haproxy.cfg
 sudo echo -e "\nbackend not-yet.tech-backend" >> /etc/haproxy/haproxy.cfg
+sudo echo -e "\tbalance roundrobin" >> /etc/haproxy/haproxy.cfg
 sudo echo -e "\tserver 109538-web-01 54.210.88.105:80 check" >> /etc/haproxy/haproxy.cfg
 sudo echo -e "\tserver 109538-web-02 100.26.233.248:80 check" >> /etc/haproxy/haproxy.cfg
 sudo service haproxy restart
