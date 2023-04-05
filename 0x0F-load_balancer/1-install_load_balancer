@@ -6,6 +6,6 @@ sudo echo -e "\nfrontend not-yet.tech-frontend" >> /etc/haproxy/haproxy.cfg
 sudo echo -e "\tbind *:80" >> /etc/haproxy/haproxy.cfg
 sudo echo -e "\tdefault_backend servers" >> /etc/haproxy/haproxy.cfg
 sudo echo -e "\nbackend not-yet.tech-backend" >> /etc/haproxy/haproxy.cfg
-sudo echo -e "\tserver 109538-web-01 54.90.3.149:80 check" >> /etc/haproxy/haproxy.cfg
-sudo echo -e "\tserver 109538-web-02 75.101.217.125:80 check" >> /etc/haproxy/haproxy.cfg
+sudo echo -e "\tserver 109538-web-01 54.210.88.105:80 check" >> /etc/haproxy/haproxy.cfg
+sudo echo -e "\tserver 109538-web-02 100.26.233.248:80 check" >> /etc/haproxy/haproxy.cfg
 sudo service haproxy restart
