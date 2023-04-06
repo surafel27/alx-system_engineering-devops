@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # Ubuntu container’s Nginx installation from listening on port 80
 
-sudo sed -i "s/8080/80/" /etc/nginx/sites-enabled/default
-sudo service nginx stop
-sudo service nginx start
+sudo sed -i "s/8080 default_server/80 default_server/" /etc/nginx/sites-enabled/default
+sudo service nginx restart
