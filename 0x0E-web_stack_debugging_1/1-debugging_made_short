@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Ubuntu container’s Nginx installation from listening on port 80
 
-sudo sed -i "s/8080 default_server/80 default_serve/g;" /etc/nginx/sites-enabled/default
+sudo sed -i "s/80 default_serve/g" /etc/nginx/sites-enabled/default
 sudo service nginx restart
 echo "" | sudo dd status=none of=/var/run/nginx.pid
 sudo kill -9 "$(cat /var/run/nginx.pid)"
