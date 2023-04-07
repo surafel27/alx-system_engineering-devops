@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# list all subdamains from the Domain records: type, IP, subdomain
+
+func_domain() {
+     printf "The subdomain %s is a " "$2"
+    dig "$2.$1" | grep -A1 'ANSWER SECTION:' | awk -F' ' '{ printf $4 }'
+    printf " record and points to "
+    dig "$2.$1" | grep -A1 'ANSWER SECTION:' | awk -F' ' '{ printf $5 }'
+    echo ""
+}
+
+if [ -z "$2" ]; then
+   for subs in "www" "lb-01" "web-01" "web-02"
+   do
+       func_domain "$1" "$subs"
+   done
+else
+    func_domain "$1" "$2"
+fi
