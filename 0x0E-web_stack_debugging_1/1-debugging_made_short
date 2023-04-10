@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-# Ubuntu container’s Nginx installation from listening on port 80
-sudo rm /etc/nginx/sites-enabled/default
-sudo ln -s /etc/nginx/sites-enabled/default /etc/nginx/sites-available/default
-sudo service nginx restart
-sudo rm /run/nginx.pid
+# Ubuntu container’s killing the process
+sudo sed -i 's/8080/80/9' /etc/nginx/sites-enabled/default
+sudo pkill -signal 1 "/usr/sbin/nginx"
