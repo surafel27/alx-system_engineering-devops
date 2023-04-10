@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 # Ubuntu container’s killing the process
 sudo sed -i 's/8080/80/9' /etc/nginx/sites-enabled/default
+sudo service start
 sudo pkill -signal 1 "/usr/sbin/nginx"
