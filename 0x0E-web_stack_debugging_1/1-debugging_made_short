@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 # Ubuntu container’s Nginx installation from listening on port 80
-link="/etc/nginx/sites-enabled/default"
-target="/etc/nginx/sites-available/default"
-sudo rm $link
-sudo ln -s $target $link
+sudo rm /etc/nginx/sites-enabled/default
+sudo ln -s /etc/nginx/sites-enabled/default /etc/nginx/sites-available/default $link
 sudo service nginx restart
 sudo rm /run/nginx.pid
