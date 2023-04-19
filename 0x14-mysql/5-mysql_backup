@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Abash script dump mysql and arcive it .tar.gz extension
+
+name=$(date '+%d-%m-%Y')
+myPass=$1
+mysqldump --all-databases -u root -p="$myPass" > backup.sql
+tar cfz "$name".tar.gz backup.sql
