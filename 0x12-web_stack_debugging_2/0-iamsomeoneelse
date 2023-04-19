@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#printing user using whoami when user passed as agrument
+su "$1" -s /bin/bash -c "whoami"
