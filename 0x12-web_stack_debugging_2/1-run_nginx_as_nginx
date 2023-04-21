@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # run nginx as a non root user nginx
-adduser -s /bin/false nginx
-sudo cat /etc/passwd | grep -i nginx
-sudo sed -i 'user nginx;' /etc/nginx/nginx.conf
-sudo sed 's/80/8080' /etc/nginx/sites-enabled/default
+chmod 644 /etc/nginx/nginx.conf
+sudo sed -i 'li user nginx;' /etc/nginx/nginx.conf
+sudo sed -i 's/80/8080/' /etc/nginx/sites-enabled/default
 sudo -u nginx service nginx restart 
