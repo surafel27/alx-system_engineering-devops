@@ -69,7 +69,7 @@ add_header X-Served-By 109538-web-01;
               include proxy_params;
               proxy_pass http://0.0.0.0:5001/number_odd_or_even/$1;
         }
-        location ~ /api {
+        location ~ /api/ {
              include proxy_params;
              proxy_pass http://0.0.0.0:5002;
         }
